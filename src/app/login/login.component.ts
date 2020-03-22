@@ -26,15 +26,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  consoleLog(value){
-    console.log(value.email)
-    console.log(value.password)
-  }
-
   onSubmit(value){
-    console.log(value.password)
     this.authService.doLogin(value)
     .then(res => {
+      console.log(res);
       this.successMessage = "succesfully login";
       this.errorMessage = "";
       this.router.navigate(['/userpage'])

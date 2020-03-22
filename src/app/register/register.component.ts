@@ -30,12 +30,9 @@ export class RegisterComponent implements OnInit {
   }
 
   tryRegister(value){
-    console.log(value.email)
-    console.log(value.password)
     this.authService.doRegister(value)
     .then(res => {
       console.log(res);
-      console.log(value.password)
       this.errorMessage = "";
       this.successMessage = "Your account has been created";
       this.router.navigate(['/userpage'])

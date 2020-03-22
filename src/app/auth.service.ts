@@ -34,8 +34,6 @@ export class AuthService {
   }
 
   logout() {
-    // localStorage.removeItem('SessionUser');
-    // localStorage.clear();
     return this.afAuth.auth.signOut();
   }
 }
