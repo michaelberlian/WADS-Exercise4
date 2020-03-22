@@ -1,0 +1,5 @@
+<h1 *ngIf="user">Welcome, {{ user?.email }}!</h1>
+<h1 *ngIf="!user">You are logged out!</h1>
+
+<button *ngIf="user" class="btn text-uppercase"  (click) = "logout()">logout</button>
+<button *ngIf="!user" class="btn text-uppercase"  (click) = "login()">login</button>
